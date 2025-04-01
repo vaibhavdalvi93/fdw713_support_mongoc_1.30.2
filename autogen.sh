@@ -63,7 +63,7 @@ function checkout_json_lib
 function install_json_lib
 {
 	cd json-c &&
-	$CMAKE_COMMAND -DCMAKE_INSTALL_PREFIX=$JSONC_INSTALL $JSONC_CFLAGS . &&
+	$CMAKE_COMMAND -DCMAKE_INSTALL_PREFIX=$JSONC_INSTALL $JSONC_CFLAGS -DDISABLE_EXTRA_LIBS=ON . &&
 	make install &&
 	cd ..
 }
